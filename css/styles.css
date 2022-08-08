@@ -1,0 +1,508 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DA2535;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc1b1b;
+}
+
+body {
+  background-color: #FBFBFB;
+  color: #292929;
+}
+body h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7em;
+}
+.navbar h1 {
+  font-size: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.navbar h1 span {
+  color: #DA2535;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 80px;
+}
+.navbar ul li {
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.navbar ul li:hover {
+  color: #DA2535;
+}
+.navbar button {
+  font-weight: 600;
+  font-size: 24px;
+  border: 2px solid #292929;
+  padding: 0.3em 2.5em;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.navbar button:hover {
+  border-color: #DA2535;
+  color: #DA2535;
+}
+.navbar .mobile-menu {
+  cursor: pointer;
+  display: none;
+  width: 26px;
+  height: 4px;
+  background: #292929;
+  position: relative;
+}
+.navbar .mobile-menu::before {
+  content: "";
+  width: 30px;
+  display: block;
+  height: 4px;
+  background: #292929;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  transition: 0.6s;
+}
+.navbar .mobile-menu::after {
+  content: "";
+  width: 30px;
+  height: 4px;
+  background: #292929;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  transition: 0.6s;
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  margin: 4em 0;
+}
+.first-section div {
+  max-width: 540px;
+}
+.first-section div h1 {
+  margin-bottom: 0.5em;
+}
+.first-section p {
+  font-size: 24px;
+  margin-bottom: 1.6em;
+  line-height: 38px;
+}
+.first-section button {
+  background-color: #DA2535;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 0.6em 3.8em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.first-section button:hover {
+  background-color: #cc1b1b;
+}
+
+.second-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6em 0;
+}
+.second-section div {
+  width: 500px;
+}
+.second-section h1 {
+  margin-bottom: 0.5em;
+}
+.second-section p {
+  margin-bottom: 1.5em;
+  font-size: 24px;
+  line-height: 38px;
+}
+.second-section span {
+  color: #DA2535;
+  font-size: 24px;
+  cursor: pointer;
+}
+.second-section span:hover {
+  text-decoration: underline;
+}
+.second-section img {
+  transition: 0.6s;
+}
+.second-section img:hover {
+  transform: scale(1.04);
+}
+
+.most-popular {
+  margin-bottom: 6em;
+}
+.most-popular h1 {
+  text-align: center;
+  margin-bottom: 4em;
+}
+.most-popular .cards {
+  display: flex;
+  justify-content: space-between;
+}
+.most-popular .cards div {
+  background-color: #F3F3F3;
+  width: 380px;
+  height: 450px;
+  border-radius: 32px;
+  position: relative;
+  text-align: center;
+}
+.most-popular .cards div img {
+  position: absolute;
+  top: -120px;
+  right: 44px;
+}
+.most-popular .cards div h1 {
+  font-weight: 500;
+  font-size: 32px;
+  margin-top: 7em;
+  margin-bottom: 1em;
+}
+.most-popular .cards div p {
+  font-size: 18px;
+  color: #616161;
+  padding: 0 1.6em;
+  margin-bottom: 2em;
+  line-height: 28px;
+}
+.most-popular .cards div span {
+  font-weight: 500;
+  font-size: 32px;
+  font-family: "Montserrat";
+}
+
+.comments {
+  margin-bottom: 6em;
+}
+.comments h1 {
+  margin-bottom: 1em;
+}
+.comments .cards {
+  display: flex;
+  justify-content: space-between;
+}
+.comments .cards div {
+  background-color: #F3F3F3;
+  width: 594px;
+  height: 390px;
+  border-radius: 16px;
+  padding: 3em;
+  padding-right: 5em;
+}
+.comments .cards img {
+  margin-bottom: 1em;
+}
+.comments .cards h1 {
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 0.5em;
+}
+.comments .cards p {
+  font-size: 24px;
+  color: #616161;
+  margin-bottom: 0.5em;
+  line-height: 38px;
+}
+.comments .cards span {
+  color: #DA2535;
+  font-size: 24px;
+}
+
+.localization {
+  margin-bottom: 6em;
+}
+.localization h1 {
+  margin-bottom: 1em;
+}
+.localization img {
+  margin-bottom: 2.5em;
+  width: 100%;
+}
+.localization div {
+  position: relative;
+  display: flex;
+  width: min-content;
+  margin: 0 auto;
+}
+.localization div input {
+  font-size: 24px;
+  width: 600px;
+  padding: 0.6em 0;
+  padding-left: 2em;
+  outline: none;
+  border: 1px solid #292929;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.localization div input::placeholder {
+  color: #292929;
+}
+.localization div img {
+  position: absolute;
+  width: 38px;
+  top: 10px;
+  left: 6.5px;
+}
+.localization div button {
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #DA2535;
+  padding: 0.65em 2em;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  position: relative;
+  right: 8px;
+}
+.localization div button:hover {
+  background-color: #cc1b1b;
+}
+
+footer {
+  display: flex;
+  margin-bottom: 6em;
+}
+footer h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-right: 1.4em;
+}
+footer h1 span {
+  color: #DA2535;
+}
+footer div {
+  margin-right: 6.8em;
+}
+footer div h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+footer div p {
+  font-size: 18px;
+  color: #616161;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+footer div p:hover {
+  color: #DA2535;
+}
+
+.developed-by {
+  width: 100%;
+  text-align: center;
+}
+.developed-by p {
+  font-size: 18px;
+}
+.developed-by a {
+  color: #DA2535;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    max-width: 1000px;
+  }
+  .second-section div {
+    width: 420px;
+  }
+  .second-section img {
+    width: 500px;
+  }
+  .most-popular .cards div {
+    width: 310px;
+    height: 400px;
+  }
+  .most-popular .cards div img {
+    top: -105px;
+    right: 25px;
+    width: 260px;
+  }
+  .most-popular .cards div h1 {
+    font-size: 28px;
+    margin-top: 6.8em;
+    margin-bottom: 0.6em;
+  }
+  .most-popular .cards div p {
+    margin-bottom: 1em;
+  }
+  .comments {
+    margin-bottom: 6em;
+  }
+  .comments .cards div {
+    width: 490px;
+    padding: 2em;
+  }
+  .localization div input {
+    width: 500px;
+  }
+  footer h1 {
+    font-size: 30px;
+  }
+  footer div {
+    margin-right: 5em;
+  }
+  footer div h2 {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 999px) {
+  .container {
+    max-width: 100%;
+    margin: 0 2em;
+  }
+  .navbar .mobile-menu {
+    display: block;
+    z-index: 2;
+  }
+  .navbar .mobile-menu.active {
+    background-color: inherit;
+  }
+  .navbar .mobile-menu.active::before {
+    transform: rotate(225deg);
+    top: 0;
+    background-color: #DA2535;
+  }
+  .navbar .mobile-menu.active::after {
+    transform: rotate(-225deg);
+    top: 0;
+    background-color: #DA2535;
+  }
+  .navbar ul {
+    padding: 6em 0 2em 0;
+    color: #FBFBFB;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    min-height: 50vh;
+    background-color: #292929;
+    transform: translateX(100%);
+    transition: 0.6s;
+    border-bottom-left-radius: 20px;
+  }
+  .navbar ul.active {
+    transform: translateX(0);
+  }
+  .navbar button {
+    display: none;
+  }
+  .navbar .active {
+    background-color: black;
+  }
+  .first-section {
+    gap: 0;
+  }
+  .first-section img {
+    display: none;
+  }
+  .first-section div {
+    max-width: 100%;
+  }
+  .first-section button {
+    width: 100%;
+  }
+  .second-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .second-section div {
+    width: 100%;
+  }
+  .second-section img {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .most-popular {
+    margin-bottom: 0;
+  }
+  .most-popular .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .most-popular .cards div {
+    margin-bottom: 10em;
+  }
+  .comments h1 {
+    text-align: center;
+  }
+  .comments .cards {
+    flex-direction: column;
+  }
+  .comments .cards div {
+    margin-bottom: 2em;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .localization div {
+    width: 100%;
+  }
+  .localization div input {
+    width: 100%;
+    font-size: 18px;
+  }
+  .localization div img {
+    left: 0;
+    width: 30px;
+  }
+  .localization div button {
+    padding: 1em;
+    font-size: 14px;
+  }
+  footer {
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
