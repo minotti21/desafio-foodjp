@@ -85,6 +85,7 @@ body h1 {
   height: 4px;
   background: #292929;
   position: relative;
+  border-radius: 2px;
 }
 .navbar .mobile-menu::before {
   content: "";
@@ -96,6 +97,7 @@ body h1 {
   top: -10px;
   right: 0;
   transition: 0.6s;
+  border-radius: 2px;
 }
 .navbar .mobile-menu::after {
   content: "";
@@ -106,6 +108,7 @@ body h1 {
   top: 10px;
   right: 0;
   transition: 0.6s;
+  border-radius: 2px;
 }
 
 .first-section {
@@ -401,19 +404,23 @@ footer div p:hover {
   .navbar .mobile-menu {
     display: block;
     z-index: 2;
+    position: fixed;
+    right: 2em;
   }
   .navbar .mobile-menu.active {
-    background-color: inherit;
+    visibility: hidden;
   }
   .navbar .mobile-menu.active::before {
     transform: rotate(225deg);
     top: 0;
     background-color: #DA2535;
+    visibility: visible;
   }
   .navbar .mobile-menu.active::after {
     transform: rotate(-225deg);
     top: 0;
     background-color: #DA2535;
+    visibility: visible;
   }
   .navbar ul {
     padding: 6em 0 2em 0;
@@ -432,6 +439,7 @@ footer div p:hover {
   }
   .navbar ul.active {
     transform: translateX(0);
+    z-index: 1;
   }
   .navbar button {
     display: none;
