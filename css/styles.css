@@ -339,6 +339,7 @@ footer div p:hover {
 
 .developed-by {
   width: 100%;
+  margin-bottom: 1em;
   text-align: center;
 }
 .developed-by p {
