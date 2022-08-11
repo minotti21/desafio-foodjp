@@ -168,11 +168,19 @@ body h1 {
 .second-section span:hover {
   text-decoration: underline;
 }
-.second-section img {
-  transition: 0.6s;
+.second-section figure {
+  overflow: hidden;
+  border-radius: 16px;
 }
-.second-section img:hover {
-  transform: scale(1.04);
+.second-section figure img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.5s all;
+}
+.second-section figure img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .most-popular {
@@ -193,11 +201,26 @@ body h1 {
   border-radius: 32px;
   position: relative;
   text-align: center;
+  transition: 0.6s;
+}
+.most-popular .cards div:hover {
+  transform: scale(1.04);
 }
 .most-popular .cards div img {
   position: absolute;
   top: -120px;
   right: 44px;
+}
+@keyframes animatePlateOnHover {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.most-popular .cards div img:hover {
+  animation: animatePlateOnHover 6s linear infinite;
 }
 .most-popular .cards div h1 {
   font-weight: 500;
@@ -235,6 +258,11 @@ body h1 {
   border-radius: 16px;
   padding: 3em;
   padding-right: 5em;
+  transition: 0.8s;
+  box-shadow: 0 0 3px 1px rgba(218, 37, 52, 0);
+}
+.comments .cards div:hover {
+  box-shadow: 0 0 3px 1px rgba(218, 37, 52, 0.8470588235);
 }
 .comments .cards img {
   margin-bottom: 1em;
@@ -252,7 +280,8 @@ body h1 {
 }
 .comments .cards span {
   color: #DA2535;
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .localization {
@@ -261,9 +290,17 @@ body h1 {
 .localization h1 {
   margin-bottom: 1em;
 }
-.localization img {
+.localization figure {
+  overflow: hidden;
   margin-bottom: 2.5em;
+  border-radius: 15px;
+}
+.localization img {
+  transition: 0.6s;
   width: 100%;
+}
+.localization img:hover {
+  transform: scale(1.4);
 }
 .localization div {
   position: relative;
@@ -331,6 +368,7 @@ footer div p {
   font-size: 18px;
   color: #616161;
   margin-bottom: 1em;
+  width: fit-content;
   cursor: pointer;
 }
 footer div p:hover {
@@ -437,10 +475,10 @@ footer div p:hover {
     transform: translateX(100%);
     transition: 0.6s;
     border-bottom-left-radius: 20px;
+    z-index: 1;
   }
   .navbar ul.active {
     transform: translateX(0);
-    z-index: 1;
   }
   .navbar button {
     display: none;
@@ -450,6 +488,12 @@ footer div p:hover {
   }
   .first-section {
     gap: 0;
+  }
+  .first-section h1 {
+    font-size: 30px;
+  }
+  .first-section p {
+    font-size: 18px;
   }
   .first-section img {
     display: none;
@@ -464,6 +508,12 @@ footer div p:hover {
     flex-direction: column;
     justify-content: center;
   }
+  .second-section h1 {
+    font-size: 30px;
+  }
+  .second-section p {
+    font-size: 18px;
+  }
   .second-section div {
     width: 100%;
   }
@@ -474,6 +524,9 @@ footer div p:hover {
   .most-popular {
     margin-bottom: 0;
   }
+  .most-popular h1 {
+    font-size: 36px;
+  }
   .most-popular .cards {
     flex-direction: column;
     align-items: center;
@@ -481,8 +534,12 @@ footer div p:hover {
   .most-popular .cards div {
     margin-bottom: 10em;
   }
+  .most-popular .cards div h1 {
+    font-size: 28px;
+  }
   .comments h1 {
     text-align: center;
+    font-size: 36px;
   }
   .comments .cards {
     flex-direction: column;
@@ -493,16 +550,25 @@ footer div p:hover {
     height: auto;
     text-align: center;
   }
+  .comments .cards div h1 {
+    font-size: 28px;
+  }
+  .comments .cards div p {
+    font-size: 18px;
+  }
+  .localization h1 {
+    font-size: 36px;
+  }
   .localization div {
     width: 100%;
   }
   .localization div input {
     width: 100%;
-    font-size: 18px;
+    font-size: 15px;
   }
   .localization div img {
-    left: 0;
-    width: 30px;
+    left: 2px;
+    width: 28px;
   }
   .localization div button {
     padding: 1em;

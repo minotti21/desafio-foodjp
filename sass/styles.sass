@@ -139,10 +139,17 @@ body
         cursor: pointer
         &:hover
             text-decoration: underline
-    img
-        transition: 0.6s
-        &:hover
-            transform: scale(1.04)
+    figure
+        overflow: hidden
+        border-radius: 16px
+        img
+            -webkit-transform: scale(1)
+            transform: scale(1)
+            -webkit-transition: .3s ease-in-out
+            transition: 0.5s all
+            &:hover
+                -webkit-transform: scale(1.1)
+                transform: scale(1.1)
 
 .most-popular
     margin-bottom: 6em
@@ -159,10 +166,20 @@ body
             border-radius: 32px
             position: relative
             text-align: center
+            transition: 0.6s
+            &:hover
+                transform: scale(1.04)
             img
                 position: absolute
                 top: -120px
                 right: 44px
+                @keyframes animatePlateOnHover
+                    0%
+                        transform: rotate(0deg)
+                    100%
+                        transform: rotate(360deg)
+                &:hover
+                    animation: animatePlateOnHover 6s linear infinite
             h1
                 font-weight: 500
                 font-size: 32px
@@ -193,6 +210,10 @@ body
             border-radius: 16px
             padding: 3em
             padding-right: 5em
+            transition: 0.8s
+            box-shadow: 0 0 3px 1px #da253400
+            &:hover
+                box-shadow: 0 0 3px 1px #da2534d8
         img
             margin-bottom: 1em
         h1
@@ -206,15 +227,23 @@ body
             line-height: 38px
         span
             color: variables.$red
-            font-size: 24px
+            font-size: 30px
+            font-weight: 700
 
 .localization
     margin-bottom: 6em
     h1
         margin-bottom: 1em
-    img
+    figure
+        overflow: hidden
         margin-bottom: 2.5em
+        border-radius: 15px
+    img
+        transition: 0.6s
         width: 100%
+        &:hover
+            transform: scale(1.4)
+
     div
         position: relative
         display: flex
@@ -270,6 +299,7 @@ footer
             font-size: 18px
             color: variables.$gray
             margin-bottom: 1em
+            width: fit-content
             cursor: pointer
             &:hover
                 color: variables.$red
@@ -363,9 +393,9 @@ footer
             transform: translateX(100%)
             transition: 0.6s
             border-bottom-left-radius: 20px
+            z-index: 1
         ul.active
             transform: translateX(0)
-            z-index: 1
         button
             display: none
         .active
@@ -373,6 +403,10 @@ footer
 
     .first-section
         gap: 0
+        h1
+            font-size: 30px
+        p
+            font-size: 18px
         img
             display: none
         div
@@ -382,6 +416,10 @@ footer
     .second-section
         flex-direction: column
         justify-content: center
+        h1
+            font-size: 30px
+        p
+            font-size: 18px
         div
             width: 100%
         img
@@ -389,14 +427,19 @@ footer
             margin-bottom: 2em
     .most-popular
         margin-bottom: 0
+        h1
+            font-size: 36px
         .cards
             flex-direction: column
             align-items: center
             div
                 margin-bottom: 10em
+                h1
+                    font-size: 28px
     .comments
         h1
             text-align: center
+            font-size: 36px
         .cards
             flex-direction: column
             div
@@ -404,15 +447,21 @@ footer
                 width: 100%
                 height: auto
                 text-align: center
+                h1
+                    font-size: 28px
+                p
+                    font-size: 18px
     .localization
+        h1
+            font-size: 36px
         div
             width: 100%
             input
                 width: 100%
-                font-size: 18px
+                font-size: 15px
             img
-                left: 0
-                width: 30px
+                left: 2px
+                width: 28px
             button
                 padding: 1em
                 font-size: 14px
